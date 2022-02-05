@@ -5,7 +5,8 @@ const bcrypt = require('bcrypt');
 module.exports = {
   create,
   login,
-  checkToken
+  checkToken,
+  getUser
 };
 
 function checkToken(req, res) {
@@ -39,6 +40,11 @@ async function login(req, res) {
   }
 }
 
+async function getUser(req,res){
+  try {
+    const User await User.findOne
+  }
+}
 
 
 // Helper Functions
