@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-
+const cors = require('cors');
 // Always require and configure near the top 
 require('dotenv').config();
 
@@ -13,6 +13,7 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cors());
 
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
@@ -23,8 +24,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Be sure to mount before routes
 app.use(require('./config/checkToken'));
 
+
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/profile',require('./routes/api/profile'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

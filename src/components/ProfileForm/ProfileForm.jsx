@@ -13,6 +13,34 @@ class ProfileForm extends Component {
     error: ''
   }
 
+  handleSubmit = (evt) => {
+    evt.preventDefault();
+    try {
+        const data = new FormData(evt.target);
+        console.log(data);
+        console.log(data.get('firstName'));
+        var object = {};
+        data.forEach((value, key) => object[key] = value);
+        var json = JSON.stringify(object);
+        console.log(json);
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: json
+      };
+      fetch('http://localhost:3001/api/profile/save', requestOptions)
+          .then(response => response.json())
+          .then(data => console.log(data));
+
+    } catch {
+      // An error occurred...
+
+    }
+  }
+
+
+
+
 
   render() {
     // const disable = this.state.password !== this.state.confirm;
@@ -21,19 +49,19 @@ class ProfileForm extends Component {
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>First Name</label>
-            <input type="text" firstName="firstName" placeholder="Enter your first name" onChange={this.handleChange} required />
+            <input type="text" name="firstName" placeholder="Enter your first name" required />
             <label>Last Name</label>
-            <input type="text" lastName="lastName" placeholder="Enter your last name" onChange={this.handleChange} required />
+            <input type="text" name="lastName" placeholder="Enter your last name" required />
             <label>Street Address</label>
-            <input type="text" streetAddress="streetAddress" placeholder="Street address" onChange={this.handleChange} required />
+            <input type="text" name="streetAddress" placeholder="Street address" required />
             <label>City</label>
-            <input type="text" addresscity="addressCity" placeholder="Enter your City" onChange={this.handleChange} required />
+            <input type="text" name="addressCity" placeholder="Enter your City" required />
             <label>State</label>
-            <select type="text" addressState="adressState"  onChange={this.handleChange} required>
+            <select type="text" name="addressState" required>
                 <option value="CA">California</option>
             </select>
             <label>State</label>
-            <input type="number" maxLength="5" placeholder="00000" minLength="5" addressZip="addressZip" />
+            <input type="number" maxLength="5" placeholder="00000" minLength="5" name="addressZip" />
 
             <button type="submit">Create Profile</button>
           </form>
