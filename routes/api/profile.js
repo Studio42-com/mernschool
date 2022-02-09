@@ -1,9 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const profileCtrl = require('../../controllers/api/profile');
+var express = require('express');
+var router = express.Router();
 
-
-router.post('/save', profileCtrl.create);
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Welcome to the School of MERN' });
+});
 
 
 module.exports = router;

@@ -2,12 +2,18 @@ import './App.css';
 import { useState } from "react";
 import { getUser } from "../../utilities/users-service";
 import { Routes, Route } from "react-router-dom";
-import NewOrderPage from "../NewOrderPage/NewOrderPage";
+
 import AuthPage from "../AuthPage/AuthPage";
-import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
+
 import NavBar from "../../components/NavBar/NavBar";
 import Start from "../Start/Start";
-import User from"../User/User";
+// import User from "../User/User";
+import Profile from "../Profile/Profile";
+import Mod from "../Mod/Mod";
+import PrintPage from "../PrintPage/PrintPage";
+
+
+
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -19,14 +25,20 @@ function App() {
         <>
         <NavBar setUser={setUser} user={user}/>
           <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+            {/* <Route path="/orders/new" element={<NewOrderPage />} />
+            <Route path="/orders" element={<OrderHistoryPage />} /> */}
+            <Route path="/profile" element = {<Profile />} />
+            <Route path="/mod" element = {<Mod />} />
+            <Route path="/print" element = {<PrintPage />} />
+            {/* <Route path="/"  exact element = {<User />} /> */}
+                      {/* <User /> */}
           </Routes>
-          <User />
+
         </>
         :
         // <AuthPage setUser={setUser} />
-        <><Start />
+        <>
+        <Start />
         
         <Routes>
           <Route path="/auth" element={<AuthPage setUser={setUser} />} />
