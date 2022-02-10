@@ -7,7 +7,7 @@ import AuthPage from "../AuthPage/AuthPage";
 
 import NavBar from "../../components/NavBar/NavBar";
 import Start from "../Start/Start";
-// import User from "../User/User";
+import User from "../User/User";
 import Profile from "../Profile/Profile";
 import Mod from "../Mod/Mod";
 import PrintPage from "../PrintPage/PrintPage";
@@ -30,7 +30,7 @@ function App() {
             <Route path="/profile" element = {<Profile />} />
             <Route path="/mod" element = {<Mod />} />
             <Route path="/print" element = {<PrintPage />} />
-            {/* <Route path="/"  exact element = {<User />} /> */}
+            <Route path="/" element = {<User />} />
                       {/* <User /> */}
           </Routes>
 

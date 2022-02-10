@@ -6,6 +6,17 @@ function User(){
     return(
     <>
         <div>This is supposed to be the user landing Page</div> 
+
+        <table>
+            <tr>
+                <th>User Profile Informtion</th>
+                <th>2</th>
+            </tr>
+      
+            <tr>
+                <td>[Error] or Show profile information(limited)</td>
+                <td>4</td>
+            </tr></table>
         {/* <ProfileForm /> */}
         <NavBar2 />
           

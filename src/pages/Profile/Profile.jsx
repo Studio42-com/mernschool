@@ -1,3 +1,5 @@
+import NavBar2 from "../../components/NavBar2/NavBar2";
+
 function Profile() {
 
   return (
@@ -8,6 +10,7 @@ function Profile() {
           <li>First Name</li>
           <li>Address</li>
         </ul>
+      <NavBar2 />
     </div>
   );
 }
