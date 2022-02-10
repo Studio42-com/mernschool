@@ -8,7 +8,8 @@ const profileSchema = new Schema({
   streetAddress: {type: String, required: true},
   addressCity: {type: String, required: true},
   addressState: {type: String, required: true},
-  addressZip: {type: Number, required: true}
+  addressZip: {type: Number, required: true},
+  email: {type: String, required: true}
 
 }, {
   timestamps: true,

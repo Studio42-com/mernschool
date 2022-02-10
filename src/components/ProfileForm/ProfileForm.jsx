@@ -39,7 +39,9 @@ class ProfileForm extends Component {
   }
 
 
-
+  retrieveEmail = () => {
+    return localStorage.getItem("email");
+    };
 
 
   render() {
@@ -62,6 +64,7 @@ class ProfileForm extends Component {
             </select>
             <label>State</label>
             <input type="number" maxLength="5" placeholder="00000" minLength="5" name="addressZip" />
+            <input type="hidden" name="email" value={()=>localStorage.getItem("email")} />
 
             <button type="submit">Create Profile</button>
           </form>
