@@ -1,5 +1,6 @@
 // import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import NavBar2 from "../../components/NavBar2/NavBar2";
+import styles from './User.css';
 
 
 function User(){

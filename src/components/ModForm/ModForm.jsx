@@ -14,16 +14,16 @@ class Mod extends Component {
     error: "",
   };
  
-  useEffect(() => {
-    const data = { email: localStorage.getItem('email')};
-        fetch('http://localhost:3001/api/profile/read', {
-  method: 'POST', // or 'PUT'
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-}).then(res=>res.json()).then(data=>console.log(data));
-});
+//   useEffect(() => {
+//     const data = { email: localStorage.getItem('email')};
+//         fetch('http://localhost:3001/api/profile/read', {
+//   method: 'POST', // or 'PUT'
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// }).then(res=>res.json()).then(data=>console.log(data));
+// });
 
 
 
@@ -92,7 +92,7 @@ class Mod extends Component {
             <select type="text" name="addressState" required>
               <option value="CA">California</option>
             </select>
-            <label>State</label>
+            <label>Postal Code:</label>
             <input
               type="number"
               maxLength="5"

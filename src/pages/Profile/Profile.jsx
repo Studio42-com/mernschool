@@ -1,4 +1,6 @@
 import ProfileForm from "../../components/ProfileForm/ProfileForm";
+// import styles from './Profile.css';
+// import './Profile.css';
 
 function Profile(){
   return <div>

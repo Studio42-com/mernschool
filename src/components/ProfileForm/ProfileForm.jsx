@@ -1,4 +1,6 @@
 import { Component } from "react";
+
+
 // import { signUp } from "../../utilities/users-service";
 
 class ProfileForm extends Component {
@@ -78,7 +80,7 @@ class ProfileForm extends Component {
             <select type="text" name="addressState" required>
               <option value="CA">California</option>
             </select>
-            <label>State</label>
+            <label>Postal Code:</label>
             <input
               type="number"
               maxLength="5"
@@ -92,7 +94,7 @@ class ProfileForm extends Component {
               value={localStorage.getItem("email")}
             />
 
-            <button type="submit">Create Profile</button>
+            <button type="submit">Create Profile</button> | <button type="cancel">Cancel</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>

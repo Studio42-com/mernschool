@@ -21,16 +21,23 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: black;
+  -webkit-text-stroke-color: var(--custom2); 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   font-size: 24px;
+  font-weight: bolder;
+  color: var(--custom2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--custom1);  */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--custom1); 
   background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;
@@ -165,6 +172,11 @@ button:disabled, form:invalid button[type="submit"] {
 }
 
 button[type="submit"] {
-  grid-column: span 2;
+  grid-column: span 1;
+  margin: 1vmin 0 0;
+}
+
+button[type="cancel"] {
+  grid-column: span 1;
   margin: 1vmin 0 0;
 }

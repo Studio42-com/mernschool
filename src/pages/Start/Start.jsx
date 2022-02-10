@@ -6,7 +6,7 @@ function Start() {
 
         <div>
             <h1>Start or landing page</h1>
-            <Link to="/auth" ><button>Sign Ip/Log In</button></Link> | <button>Log In</button>
+            <Link to="/auth" ><button>Sign Up/Log In</button></Link> | <button>Log In</button>
         </div>
     )
 

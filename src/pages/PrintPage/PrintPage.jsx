@@ -1,3 +1,7 @@
+import React from 'react';
+// import styles from './PrintPage.css';
+
+
 function PrintPage(){
     return (
         <div>
@@ -12,10 +16,10 @@ function PrintPage(){
         Address: [Street Address], [City], [State] [Zip]
         <br />        <br />        <br />        <br />
 
-Tuition and Fees: 1 Eternal Human Soul, not necessarily yours. or 15 polician souls, subject to approval and if not previously used for payment. Consent for forfeiture of soul not necessary. Payable upon enrollment. Financial Aid not available.
+Tuition and Fees: 1 Eternal Human Soul, not necessarily yours. or 15 politician souls, subject to approval(may have already been used). Consent for forfeiture of soul not necessary. Payable upon enrollment. Financial Aid not available.
 <br />        <br /> 
 
-Signature: _________________________________   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label>Date:</label> <form><input type="date"/></form>
+Signature: _________________________________   &nbsp;&nbsp;&nbsp; <label>Date:</label> <form><input type="date" size="15"/></form>
 
 
 <br />        <br />        <br />        <br />

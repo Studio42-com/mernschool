@@ -2,15 +2,14 @@ import './App.css';
 import { useState } from "react";
 import { getUser } from "../../utilities/users-service";
 import { Routes, Route } from "react-router-dom";
-
 import AuthPage from "../AuthPage/AuthPage";
-
 import NavBar from "../../components/NavBar/NavBar";
 import Start from "../Start/Start";
 import User from "../User/User";
 import Profile from "../Profile/Profile";
 import Mod from "../Mod/Mod";
 import PrintPage from "../PrintPage/PrintPage";
+// import styles from '../../index.css';
 
 
 
