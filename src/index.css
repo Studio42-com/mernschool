@@ -33,11 +33,12 @@ body {
   sans-serif;
   font-size: 24px;
   font-weight: bolder;
-  color: var(--custom2);
+  /* color: var(--custom2); */
+  color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--custom1); 
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--custom1);  */
   background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;

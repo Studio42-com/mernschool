@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
-import NavBar2 from "../NavBar2/NavBar2";
+// import NavBar2 from "../NavBar2/NavBar2";
 
 function NavBar({ user, setUser }) {
 
@@ -18,9 +18,9 @@ function NavBar({ user, setUser }) {
       <span>Welcome, {user.name}!</span>
       &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to=""><button>Log Out</button></Link>
-      <br />
+      {/* <br />
       <NavBar2 />
-      <br />
+      <br /> */}
       <hr />
     </nav>
 

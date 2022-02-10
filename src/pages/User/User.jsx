@@ -10,7 +10,7 @@ function User(){
 
         <table>
             <tr>
-                <th>User Profile Informtion</th>
+                <th>User Profile Information</th>
                 <th>2</th>
             </tr>
       
@@ -18,7 +18,7 @@ function User(){
                 <td>[Error] or Show profile information(limited)</td>
                 <td>4</td>
             </tr></table>
-        {/* <ProfileForm /> */}
+
         <NavBar2 />
           
     </>
