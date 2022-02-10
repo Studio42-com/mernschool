@@ -1,10 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const profileCtrl = require('../../controllers/api/profile');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Welcome to the School of MERN' });
-});
+// POST /api/users
+router.post('/save', profileCtrl.create);
+router.get('/profile');
+
+//POST /api/profile
 
 
 module.exports = router;
