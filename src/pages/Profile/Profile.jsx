@@ -1,18 +1,12 @@
-import NavBar2 from "../../components/NavBar2/NavBar2";
+import ProfileForm from "../../components/ProfileForm/ProfileForm";
 
-function Profile() {
-
-  return (
-    <div>
-      <h1>This is the Profile Page</h1>
-        <ul>
-          <li>First Name</li>
-          <li>First Name</li>
-          <li>Address</li>
-        </ul>
-      <NavBar2 />
-    </div>
-  );
+function Profile(){
+  return <div>
+    <h2>The Profile Form Page</h2>
+    <ProfileForm />
+  </div>
 }
+
+
 
 export default Profile;
