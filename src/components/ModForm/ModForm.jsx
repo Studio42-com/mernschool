@@ -1,8 +1,24 @@
-import { Component, useEffect} from "react";
+import { Component, useEffect } from "react";
 
 // import { signUp } from "../../utilities/users-service";
 
 class Mod extends Component {
+  componentDidMount() {
+    const data = { email: localStorage.getItem("email") };
+    fetch("http://localhost:3001/api/profile/read", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState(data);
+        console.log(this.state);
+      });
+  }
+
   state = {
     name: "",
     firstName: "",
@@ -13,19 +29,6 @@ class Mod extends Component {
     addressZip: "",
     error: "",
   };
- 
-//   useEffect(() => {
-//     const data = { email: localStorage.getItem('email')};
-//         fetch('http://localhost:3001/api/profile/read', {
-//   method: 'POST', // or 'PUT'
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(data),
-// }).then(res=>res.json()).then(data=>console.log(data));
-// });
-
-
 
   handleSubmit = (evt) => {
     evt.preventDefault();
@@ -42,7 +45,7 @@ class Mod extends Component {
         headers: { "Content-Type": "application/json" },
         body: json,
       };
-      fetch("http://localhost:3001/api/profile/save", requestOptions)
+      fetch("http://localhost:3001/api/profile/update", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data));
     } catch {
@@ -56,6 +59,7 @@ class Mod extends Component {
 
   render() {
     // const disable = this.state.password !== this.state.confirm;
+
     return (
       <div>
         <div className="form-container">
@@ -66,6 +70,8 @@ class Mod extends Component {
               name="firstName"
               placeholder="Enter your first name"
               required
+              value={this.state.firstName}
+              onChange={(evt) => this.setState({ firstName: evt.target.value })}
             />
             <label>Last Name</label>
             <input
@@ -73,6 +79,8 @@ class Mod extends Component {
               name="lastName"
               placeholder="Enter your last name"
               required
+              value={this.state.lastName}
+              onChange={(evt) => this.setState({ lastName: evt.target.value })}
             />
             <label>Street Address</label>
             <input
@@ -80,17 +88,34 @@ class Mod extends Component {
               name="streetAddress"
               placeholder="Street address"
               required
+              value={this.state.streetAddress}
+              onChange={(evt) =>
+                this.setState({ streetAddress: evt.target.value })
+              }
             />
             <label>City</label>
             <input
               type="text"
               name="addressCity"
               placeholder="Enter your City"
-              required
+              require
+              value={this.state.addressCity}
+              onChange={(evt) =>
+                this.setState({ addressCity: evt.target.value })
+              }
             />
             <label>State</label>
-            <select type="text" name="addressState" required>
+            <select
+              type="text"
+              name="addressState"
+              required
+              value={this.addressState}
+              onChange={(evt) =>
+                this.setState({ addressState: evt.target.value })
+              }
+            >
               <option value="CA">California</option>
+              <option value="AB">Test</option>
             </select>
             <label>Postal Code:</label>
             <input
@@ -99,6 +124,10 @@ class Mod extends Component {
               placeholder="00000"
               minLength="5"
               name="addressZip"
+              value={this.state.addressZip}
+              onChange={(evt) =>
+                this.setState({ addressZip: evt.target.value })
+              }
             />
             <input
               type="hidden"

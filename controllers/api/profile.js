@@ -1,8 +1,10 @@
 const Profile = require("../../models/profile");
+const User = require("../../models/user");
 
 module.exports = {
   create,
-  read
+  read,
+  update,
 };
 
 async function create(req, res) {
@@ -16,13 +18,30 @@ async function create(req, res) {
   }
 }
 
-async function read(req,res) {
+async function read(req, res) {
   try {
-    const user = Users.findOne({ 'email': req.body.email });
-    return res.json(user);
+    const profile = await Profile.findOne({ email: req.body.email });
+    return res.json(profile);
   } catch (err) {
     res.status(400).json(err);
   }
+}
 
-
+async function update(req, res) {
+  try {
+    const profile = await Profile.updateOne(
+      { email: req.body.email },
+      {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        addressCity: req.body.addressCity,
+        addressState: req.body.addressState,
+        addressZip: req.body.addressZip,
+        streetAddress: req.body.streetAddress,
+      }
+    );
+    return res.json(profile);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 }
