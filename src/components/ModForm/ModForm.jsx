@@ -1,5 +1,5 @@
 import { Component, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 // import { signUp } from "../../utilities/users-service";
 
@@ -29,6 +29,7 @@ class Mod extends Component {
     addressState: "",
     addressZip: "",
     error: "",
+    doRedirect: false,
   };
 
   handleSubmit = (evt) => {
@@ -48,7 +49,11 @@ class Mod extends Component {
       };
       fetch("http://localhost:3001/api/profile/update", requestOptions)
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => {
+          console.log(data);
+          this.setState({ doRedirect: true });
+          console.log(this.state);
+        });
     } catch {
       // An error occurred...
     }
@@ -60,7 +65,10 @@ class Mod extends Component {
 
   render() {
     // const disable = this.state.password !== this.state.confirm;
-
+    if (this.state.doRedirect) {
+      console.log("hereee");
+      return <Navigate to="/" />;
+    }
     return (
       <div>
         <div className="form-container">
@@ -136,9 +144,7 @@ class Mod extends Component {
               value={localStorage.getItem("email")}
             />
             <div id="buttonrow">
-              <Link to="/">
-                <button type="submit">Update Profile</button>{" "}
-              </Link>
+              <button type="submit">Update Profile</button>{" "}
               <Link to="/">
                 <button type="cancel">Cancel</button>
               </Link>
