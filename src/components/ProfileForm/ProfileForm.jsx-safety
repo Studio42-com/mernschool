@@ -1,5 +1,5 @@
-import { Component, useEffect } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Component } from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 
 // import { signUp } from "../../utilities/users-service";
@@ -14,7 +14,6 @@ class ProfileForm extends Component {
     addressState: "",
     addressZip: "",
     error: "",
-    doRedirect: false,
   };
 
   handleSubmit = (evt) => {
@@ -35,7 +34,6 @@ class ProfileForm extends Component {
       fetch("http://localhost:3001/api/profile/save", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data));
-        this.setState({ doRedirect: true });
     } catch {
       // An error occurred...
     }
@@ -47,10 +45,6 @@ class ProfileForm extends Component {
 
   render() {
     // const disable = this.state.password !== this.state.confirm;
-      if (this.state.doRedirect){
-        return <Navigate to="/" />;
-
-      }
     return (
 
       <div>
@@ -62,8 +56,6 @@ class ProfileForm extends Component {
               name="firstName"
               placeholder="Enter your first name"
               required
-              value={this.state.firstName}
-              onChange={(evt) => this.setState({ firstName: evt.target.value })}
             />
             <label>Last Name</label>
             <input
@@ -71,8 +63,6 @@ class ProfileForm extends Component {
               name="lastName"
               placeholder="Enter your last name"
               required
-              value={this.state.lastName}
-              onChange={(evt) => this.setState({ lastName: evt.target.value })}
             />
             <label>Street Address</label>
             <input
@@ -80,10 +70,6 @@ class ProfileForm extends Component {
               name="streetAddress"
               placeholder="Street address"
               required
-              value={this.state.streetAddress}
-              onChange={(evt) =>
-                this.setState({ streetAddress: evt.target.value })
-              }
             />
             <label>City</label>
             <input
@@ -91,18 +77,9 @@ class ProfileForm extends Component {
               name="addressCity"
               placeholder="Enter your City"
               required
-              value={this.state.addressCity}
-              onChange={(evt) =>
-                this.setState({ addressCity: evt.target.value })
-              }
             />
             <label>State</label>
-            <select type="text" name="addressState" required
-              value={this.addressState}
-              onChange={(evt) =>
-                this.setState({ addressState: evt.target.value })
-              }
-            >
+            <select type="text" name="addressState" required>
               <option value="CA">California</option>
             </select>
             <label>Postal Code:</label>
@@ -112,10 +89,6 @@ class ProfileForm extends Component {
               placeholder="00000"
               minLength="5"
               name="addressZip"
-              value={this.state.addressZip}
-              onChange={(evt) =>
-                this.setState({ addressZip: evt.target.value })
-              }
             />
             <input
               type="hidden"
@@ -123,7 +96,7 @@ class ProfileForm extends Component {
               value={localStorage.getItem("email")}
             />
           <div id="buttonrow">
-            <Link to="/"><button type="submit">Create DA Profile</button>{" "}</Link> | <Link to="/"><button type="cancel">Cancel</button></Link>
+            <button type="submit">Create Profile</button> | <Link to="/"><button type="cancel">Cancel</button></Link>
           </div>
           </form>
         </div>
