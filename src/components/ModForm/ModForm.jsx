@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { Component, useEffect } from "react";
-=======
-import { Component, useEffect} from "react";
 import { Link } from "react-router-dom";
->>>>>>> e31bb34 (Prior to tutoring Varsity Tutors Session Feb10)
 
 // import { signUp } from "../../utilities/users-service";
 
@@ -140,7 +136,12 @@ class Mod extends Component {
               value={localStorage.getItem("email")}
             />
             <div id="buttonrow">
-              <button type="submit">Update Profile</button>  <Link to="/"><button type="cancel">Cancel</button></Link>
+              <Link to="/">
+                <button type="submit">Update Profile</button>{" "}
+              </Link>
+              <Link to="/">
+                <button type="cancel">Cancel</button>
+              </Link>
             </div>
           </form>
         </div>
