@@ -135,7 +135,7 @@ class Mod extends Component {
               value={localStorage.getItem("email")}
             />
 
-            <button type="submit">Create Profile</button>
+            <button type="submit">Update Profile</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
