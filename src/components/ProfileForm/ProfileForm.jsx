@@ -1,5 +1,6 @@
 import { Component } from "react";
-
+import { Link } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 
 // import { signUp } from "../../utilities/users-service";
 
@@ -45,6 +46,7 @@ class ProfileForm extends Component {
   render() {
     // const disable = this.state.password !== this.state.confirm;
     return (
+
       <div>
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
@@ -93,8 +95,9 @@ class ProfileForm extends Component {
               name="email"
               value={localStorage.getItem("email")}
             />
-
-            <button type="submit">Create Profile</button> | <button type="cancel">Cancel</button>
+          <div id="buttonrow">
+            <button type="submit">Create Profile</button> | <Link to="/"><button type="cancel">Cancel</button></Link>
+          </div>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
@@ -104,3 +107,4 @@ class ProfileForm extends Component {
 }
 
 export default ProfileForm;
+

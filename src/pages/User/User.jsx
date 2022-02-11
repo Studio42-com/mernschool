@@ -1,12 +1,17 @@
 // import ProfileForm from "../../components/ProfileForm/ProfileForm";
 import NavBar2 from "../../components/NavBar2/NavBar2";
+import NavBar from "../../components/NavBar/NavBar";
+
 import styles from './User.css';
 
 
 function User(){
+
     return(
     <>
-        <div>This is supposed to be the user landing Page</div> 
+
+        <div>    
+        This is supposed to be the user landing Page</div> 
 
         <table>
             <tr>

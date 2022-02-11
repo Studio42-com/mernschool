@@ -4,7 +4,7 @@ import React from 'react';
 
 function PrintPage(){
     return (
-        <div>
+        <div id="print">
             <h1>MERNSchool Enrollment Application</h1>
             123 Main Street, Anyville, Denial, 54321
 
@@ -19,8 +19,12 @@ function PrintPage(){
 Tuition and Fees: 1 Eternal Human Soul, not necessarily yours. or 15 politician souls, subject to approval(may have already been used). Consent for forfeiture of soul not necessary. Payable upon enrollment. Financial Aid not available.
 <br />        <br /> 
 
-Signature: _________________________________   &nbsp;&nbsp;&nbsp; <label>Date:</label> <form><input type="date" size="15"/></form>
+    <div id="signatureRow">
 
+    <div>Signature: _________________________________   </div>
+
+    <form><label>Date:</label> <input type="date" size="15"/></form>
+</div>
 
 <br />        <br />        <br />        <br />
 Disclaimer: This is NOT a legally binding document. Signature is only for demonstration purposes.

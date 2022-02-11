@@ -18,7 +18,6 @@ function NavBar({ user, setUser }) {
       <span>Welcome, {user.name}!</span>
       &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to=""><button>Log Out</button></Link>
-
       <hr />
     </nav>
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function CompSci() {
- return (<div>
+ return (<div id="text">
     
 The Software/Hardware Information Technology school offers a complete education across various disciplines in the computer, software, networking and informational education industry.
 <ul>
