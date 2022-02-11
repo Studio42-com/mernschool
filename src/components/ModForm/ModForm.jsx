@@ -59,6 +59,24 @@ class Mod extends Component {
     }
   };
 
+  deleteProfile = () => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({email: localStorage.getItem("email")})
+    };
+    fetch("http://localhost:3001/api/profile/delete", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        this.setState({ doRedirect: true });
+        console.log(this.state);
+      });
+  }
+  
+
+
+
   retrieveEmail = () => {
     return localStorage.getItem("email");
   };
@@ -147,7 +165,7 @@ class Mod extends Component {
               <button type="submit">Update Profile</button>{" "}
               <Link to="/">
                 <button type="cancel">Cancel</button>
-              </Link>
+              </Link> <button type="delete" onClick={this.deleteProfile}>Delete My Profile</button>
             </div>
           </form>
         </div>

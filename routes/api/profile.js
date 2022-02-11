@@ -6,6 +6,7 @@ const profileCtrl = require("../../controllers/api/profile");
 router.post("/save", profileCtrl.create);
 router.post("/read", profileCtrl.read);
 router.post("/update", profileCtrl.update);
+router.post("/delete", profileCtrl.Profiledelete);
 
 //POST /api/profile
 

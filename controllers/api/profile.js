@@ -5,6 +5,7 @@ module.exports = {
   create,
   read,
   update,
+  Profiledelete,
 };
 
 async function create(req, res) {
@@ -44,4 +45,15 @@ async function update(req, res) {
   } catch (err) {
     res.status(400).json(err);
   }
+}
+
+
+async function Profiledelete(req,res){
+  try {
+    const profile = await Profile.deleteOne({email: req.body.email});
+    return res.json(profile);
+  } catch(err){
+    res.status(400).json(err);
+  }
+
 }
