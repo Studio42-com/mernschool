@@ -66,6 +66,10 @@ code {
   text-align: right;
 }
 
+.align-lf {
+  text-align: left;
+}
+
 .smaller {
   font-size: smaller;
 }
@@ -183,7 +187,7 @@ button[type="cancel"] {
 }
 
 #text {
-  color: white;
+  color: rgb(244, 225, 225);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-stroke-width: 1px;
@@ -206,7 +210,7 @@ button[type="cancel"] {
   padding: 2vmin;
   height: 100vh;
   /* background-image: url(%PUBLIC_URL%/schoolbackground.jpg); */
-  background: url(../public/parchment.jpg) no-repeat center center fixed;
+  background: url(../public/parchment.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -223,5 +227,19 @@ button[type="cancel"] {
   align-items: center;
   gap: 50px;
   justify-content: center;
+}
 
+#blacktext {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  justify-content: left;
+}
+
+#blackoutline {
+  color:white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--custom1);
+  justify-content: left;
+  text-align: left;
 }

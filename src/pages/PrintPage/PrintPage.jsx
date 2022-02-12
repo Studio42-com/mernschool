@@ -6,7 +6,7 @@ import { Component, useEffect } from "react";
 class PrintPage extends Component {
   componentDidMount() {
     const data = { email: localStorage.getItem("email") };
-    fetch("http://localhost:3001/api/profile/read", {
+    fetch("/api/profile/read", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

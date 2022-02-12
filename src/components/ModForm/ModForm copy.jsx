@@ -6,7 +6,7 @@ import { Link, Navigate } from "react-router-dom";
 class Mod extends Component {
   componentDidMount() {
     const data = { email: localStorage.getItem("email") };
-    fetch("/api/profile/read", {
+    fetch("http://localhost:3001/api/profile/read", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ class Mod extends Component {
         headers: { "Content-Type": "application/json" },
         body: json,
       };
-      fetch("/api/profile/update", requestOptions)
+      fetch("http://localhost:3001/api/profile/update", requestOptions)
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -65,7 +65,7 @@ class Mod extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({email: localStorage.getItem("email")})
     };
-    fetch("/api/profile/delete", requestOptions)
+    fetch("http://localhost:3001/api/profile/delete", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -136,7 +136,7 @@ class Mod extends Component {
               type="text"
               name="addressState"
               required
-              value={this.state.addressState}
+              value={this.addressState}
               onChange={(evt) =>
                 this.setState({ addressState: evt.target.value })
               }

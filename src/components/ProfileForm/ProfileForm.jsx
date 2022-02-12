@@ -172,7 +172,7 @@ class ProfileForm extends Component {
               value={localStorage.getItem("email")}
             />
           <div id="buttonrow">
-<button type="submit">Create DA Profile</button>{" "} | <Link to="/"><button type="cancel">Cancel</button></Link>
+<button type="submit">Create Profile</button>{" "} | <Link to="/"><button type="cancel">Cancel</button></Link>
           </div>
           </form>
         </div>
