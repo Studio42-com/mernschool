@@ -42,7 +42,7 @@ class User extends Component {
     return (
       <>
         <div className="profile">
-          <div id="blackoutline">
+          <div>
             <h2>Profile Page</h2>
             This is your Profile Page. Please check for accuracy. If everything
             is correct, please print the application using the "Print
@@ -56,7 +56,7 @@ class User extends Component {
 
             <tr>
               <td>
-                <div id="blackoutline">
+                <div className="profile align-left">
                   <ul>
                     <li>First Name: {this.state.firstName}</li>
                     <li>Last Name: {this.state.lastName}</li>

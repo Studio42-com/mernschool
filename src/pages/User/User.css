@@ -25,5 +25,13 @@ body {
 
 .profile {
   background-color: gray;
-  opacity: 0.9;
+  opacity: 0.75;
+  color: rgb(230, 216, 216);
+}
+
+.align-left {
+  text-align: left;
+  justify-content: left;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black; */
 }

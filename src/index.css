@@ -187,7 +187,8 @@ button[type="cancel"] {
 }
 
 #text {
-  color: rgb(244, 225, 225);
+  /* color: rgb(244, 225, 225); */
+  color: rgb(131, 78, 99);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-stroke-width: 1px;
