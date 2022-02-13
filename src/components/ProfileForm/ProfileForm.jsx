@@ -31,7 +31,7 @@ class ProfileForm extends Component {
         headers: { "Content-Type": "application/json" },
         body: json,
       };
-      fetch("http://localhost:3001/api/profile/save", requestOptions)
+      fetch("api/profile/save", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data));
     } catch {
