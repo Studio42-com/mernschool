@@ -57,8 +57,9 @@ class User extends Component {
                     <li>Zip Code: {this.state.addressZip}</li>
                   </ul>
                 </div>
-        <NavBar2 />
+
         </div>
+        <NavBar2 />
         </div>
               </>
     );

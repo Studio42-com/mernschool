@@ -6,16 +6,10 @@ body {
     font-size: 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--custom1);  */
-    /* background-color: var(--tan-4); */
-    /* background-color: rgba(0, 0, 0 0.5); */
     padding: 2vmin;
     height: 100vh;
-    /* background-image: url(%PUBLIC_URL%/schoolbackground.jpg); */
     background: url(../../../public/schoolbackground.jpg) no-repeat center center
-      fixed;
-  
+      fixed;  
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -25,35 +19,18 @@ body {
   
   .profile {
     color: black;
-    /* color: rgb(230, 216, 216); */
-    background-color: rgba(230, 216, 216, .6);
+    background-color: rgba(230, 216, 216, .4);
     border-radius: 1pc;
-    
-  
+    pad: 25px;
+    margin:20px;
   }
   
-  /* .profile:: before {
-    content: "";
- background-color: grey;
-
-    background: grey;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: .5;
-  }  */
-  
   .align-left {
-      position: relative;
+    position: relative;
     text-align: left;
     justify-content: left;
-    /* color: white; */
     opacity: 1;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; */
+
   }
 
 table  {

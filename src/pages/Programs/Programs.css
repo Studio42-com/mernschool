@@ -25,8 +25,11 @@ body {
     color: black;
     /* color: rgb(230, 216, 216); */
     background-color: rgba(230, 216, 216, .6);
-    border-style: solid;
+    border-style: none;
     border-radius: 1pc;
+    padding: 25px;
+    margin: 15px;
+    justify-content: center;
   }
   
 
