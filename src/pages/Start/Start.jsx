@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import "../../index";
+// import "../Programs/Programs.css";
+import "../Programs/Programs.css";
+
+
 function Start() {
 
     return (
@@ -7,7 +11,7 @@ function Start() {
         <div><Link to="/auth" ><button>Sign Up/Log In</button></Link></div>
         
         
-        <div>
+        <div className="program">
             <h1>Welcome to the MERNSchool</h1>
             <br />
             <div id="biggerfont">Welcome to the School. Learn a new trade, learn a new skill, make your mark on the world.</div>
