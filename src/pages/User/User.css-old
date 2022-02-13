@@ -24,10 +24,9 @@ body {
   }
   
   .profile {
-    color: black;
+    color: white;
     /* color: rgb(230, 216, 216); */
-    background-color: rgba(230, 216, 216, .6);
-    border-radius: 1pc;
+    color: rgb(230, 216, 216);
     
   
   }
@@ -55,7 +54,4 @@ body {
     /* -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black; */
   }
-
-table  {
-    border-style: none;
-  }
+  

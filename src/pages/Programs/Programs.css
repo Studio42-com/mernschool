@@ -13,9 +13,7 @@ body {
     padding: 2vmin;
     height: 100vh;
     /* background-image: url(%PUBLIC_URL%/schoolbackground.jpg); */
-    background: url(../../../public/schoolbackground.jpg) no-repeat center center
-      fixed;
-  
+    background: url(../../../public/schoolbackground.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,28 +21,15 @@ body {
     /* opacity: 1; */
   }
   
-  .profile {
+  .program {
     color: black;
     /* color: rgb(230, 216, 216); */
     background-color: rgba(230, 216, 216, .6);
+    border-style: solid;
     border-radius: 1pc;
-    
-  
   }
   
-  /* .profile:: before {
-    content: "";
- background-color: grey;
 
-    background: grey;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: .5;
-  }  */
   
   .align-left {
       position: relative;
@@ -55,7 +40,4 @@ body {
     /* -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black; */
   }
-
-table  {
-    border-style: none;
-  }
+  

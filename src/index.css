@@ -244,3 +244,8 @@ button[type="cancel"] {
   justify-content: left;
   text-align: left;
 }
+
+#biggerfont {
+  font-size: xx-large;
+  color: black;
+}

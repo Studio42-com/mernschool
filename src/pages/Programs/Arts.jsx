@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import "./Programs.css";
 
 function Arts() {
  return (
-<div id="text">
+<div className="program align-left">
 The School of Entertainment, Arts and Theater is dedicated to the educating students in various disciplines associated with the large umbrella of offerings in regards to professional entertainment services.
 
 <ul>

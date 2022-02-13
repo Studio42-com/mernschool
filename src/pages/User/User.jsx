@@ -1,9 +1,6 @@
-import { Component, useEffect } from "react";
-// import ProfileForm from "../../components/ProfileForm/ProfileForm";
+import { Component } from "react";
 import NavBar2 from "../../components/NavBar2/NavBar2";
-import NavBar from "../../components/NavBar/NavBar";
-
-import styles from "./User.css";
+import "./User.css";
 
 class User extends Component {
   componentDidMount() {
@@ -18,7 +15,7 @@ class User extends Component {
       .then((res) => res.json())
       .then((data) => {
         this.setState(data);
-        console.log(this.state);
+        // console.log(this.state);
       });
   }
 
@@ -41,6 +38,7 @@ class User extends Component {
   render() {
     return (
       <>
+      <div>
         <div className="profile">
           <div>
             <h2>Profile Page</h2>
@@ -48,14 +46,7 @@ class User extends Component {
             is correct, please print the application using the "Print
             Application" button below.
           </div>
-          <table>
-            <theader>
-              <th>User Profile Information</th>
-              <th>2</th>
-            </theader>
 
-            <tr>
-              <td>
                 <div className="profile align-left">
                   <ul>
                     <li>First Name: {this.state.firstName}</li>
@@ -66,14 +57,10 @@ class User extends Component {
                     <li>Zip Code: {this.state.addressZip}</li>
                   </ul>
                 </div>
-              </td>
-              <td>[Error] or Show profile information(limited)</td>
-            </tr>
-          </table>
-
-          <NavBar2 />
+        <NavBar2 />
         </div>
-      </>
+        </div>
+              </>
     );
   }
 }
