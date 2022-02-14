@@ -8,6 +8,17 @@ The MERNSChool project is a scaled back, streamlined and simplified version. The
 
 [The School of MERN](https://ga-mernschool.herokuapp.com/)
 
+
+##Trello Board:
+
+![Home Page](public/trello.jpg)
+
+##ERD:
+
+![Home Page](public/erd.jpg)
+
+The school has a 1 to many relationship with the students. The students have a one to one relationship to their profile.
+
 ## The Home Page
 ![Home Page](public/01-homepage.png)
 This is the basic landing page for all new users. The links to the available topics are live and populated
