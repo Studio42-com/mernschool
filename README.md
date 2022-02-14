@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# MERNSchool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a proof of concept project that was conceptualized by my previous employment, but was sidelined due to my termination. This actually has roots further back from a highly interactive PDF file for students to enroll into the school, which used JavaScript. I managed to get the PDF to work properly using JavaScript despite no prior experience or training. This concept actually has roots even further back for a large State of California project I pitched as an idea, which the State then made into a reality without my involvement.
 
-## Available Scripts
+Background: My previous employment was as the IT director and IT department for a beauty/barber school. Part of the modernization involved converting a WORD filed that was modified on a per enrollment basis, which was both inefficient and labor intensive. The first decision was to make a PDF that could be printed and filled in by hand as a quick-fix. The next level was a basic PDF that could be filled out. From that simple PDF, it then grew quickly in complexity and functionality via several revisions, saving the administration valuable time. The student data was eventually entered on a one-sheet and then pushed to where needed and doing calculations based on the program selected. This PDF used JavaScript. The next evolution was to collected the data via a front end web-based form store it in a database, where administration could pull the data from an administrative web solution. This retrieved data would be pushed into a PDF that was to be printed on-site and signed by the student.
 
-In the project directory, you can run:
+The MERNSChool project is a scaled back, streamlined and simplified version. The user still signs in and can complete their profile with minimal information as well as update and delete their profile data. If they are happy with the information they entered, they can generate a “print” page, which can then be printed and signed, thus emulating the actual enrollment agreement process.  MERNSchool is a full stack application using MongoDB, Express, React and Node and incorporates full CRUD into the process. This project uses several APIs that were created for this project.
 
-### `npm start`
+[The School of MERN](https://ga-mernschool.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## The Home Page
+![Home Page](public/01-homepage.png)
+This is the basic landing page for all new users. The links to the available topics are live and populated
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Information Page Sample:
+![Info Page](public/02-info-page.png)
+Just an example to show that the various pages are live buttons and not just decorative.
 
-### `npm test`
+## Authentication:
+![Authentication](public/03-authpage.png)
+The site uses a simple method of authorization and there is only one level of authentication. Users may login, shown in this example, or they may make their own new account.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## The user profile page:
+![ProfilePage](public/03a-profile.png)
+This is the basic user profile page. I left space for future expansion as this project only uses a bare-bones form to collect minimal information. The purpose of this page is for the user to see and review their information for a "print" function. If the profile has been created previously, then the fields are populated. This shows READ functionality.
 
-### `npm run build`
+## Make Profile Page:
+![Make Profile](public/04-makeprofile.png)
+This is the basic form for the user to make their profile. The hidden field of the "email" is what is used to relate the user account with the profile. This is the CREATE function.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Modify Profile Page:
+![Profile Modification Page](public/05-modprofile.png)
+The Profile Modification page uses the same model for creating a profile. The profile modification page retrieves the information from the user profile usng the email and pre-populates the fields. This ability to update the information is the UPDATE function. Users can also delete their profile information, which is the DESTROY function. This only deletes the profiel data, it does not delete the account. The Delete function also does not utilize any "confirmation" function at this time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## The Print Page:
+![Print Page](public/06-print.png)
+If a user's profile information is correct, they can choose to "print" the page. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
