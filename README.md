@@ -6,6 +6,9 @@ Background: My previous employment was as the IT director and IT department for 
 
 The MERNSChool project is a scaled back, streamlined and simplified version. The user still signs in and can complete their profile with minimal information as well as update and delete their profile data. If they are happy with the information they entered, they can generate a “print” page, which can then be printed and signed, thus emulating the actual enrollment agreement process.  MERNSchool is a full stack application using MongoDB, Express, React and Node and incorporates full CRUD into the process. This project uses several APIs that were created for this project.
 
+The technologies used are HTML, CSS, MongoDB, Express, React and Node, and deployed using Heroku
+
+
 [The School of MERN](https://ga-mernschool.herokuapp.com/)
 
 
