@@ -57,7 +57,7 @@ class PrintPage extends Component {
 
  <br />        <br />        <br />        <br />
 Disclaimer: This is NOT a legally binding document. Signature is only for demonstration purposes.
-<hr />        "Located in src/pages/Print/Print.jsx"
+{/* <hr />        "Located in src/pages/Print/Print.jsx" */}
 
 
       </div>
