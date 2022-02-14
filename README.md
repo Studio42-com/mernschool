@@ -12,11 +12,11 @@ The technologies used are HTML, CSS, Javascript, MongoDB, Express, React and Nod
 [The School of MERN](https://ga-mernschool.herokuapp.com/)
 
 
-##Trello Board:
+## Trello Board:
 
 ![Home Page](public/trello.jpg)
 
-##ERD:
+## ERD:
 
 ![Home Page](public/erd.jpg)
 
