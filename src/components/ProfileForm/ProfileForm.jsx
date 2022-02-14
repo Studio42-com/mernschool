@@ -1,6 +1,5 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
+import { Link, Navigate } from "react-router-dom";
 
 // import { signUp } from "../../utilities/users-service";
 
@@ -34,6 +33,8 @@ class ProfileForm extends Component {
       fetch("api/profile/save", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data));
+        this.setState({ doRedirect: true });
+
     } catch {
       // An error occurred...
     }
@@ -45,6 +46,12 @@ class ProfileForm extends Component {
 
   render() {
     // const disable = this.state.password !== this.state.confirm;
+//Check State and handle redirect, See line 36
+if (this.state.doRedirect) {
+  console.log("hereee");
+  return <Navigate to="/" />;
+}
+// End redirect
     return (
 
       <div>
